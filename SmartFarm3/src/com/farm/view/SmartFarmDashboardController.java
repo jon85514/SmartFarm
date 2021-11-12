@@ -398,28 +398,26 @@ public class SmartFarmDashboardController {
 		public double calculatePurchasePrice(Item item) {		
 			double purchasePrice;
 			Visitor purchasePriceVisitor = new PurchasePriceVisitor();
-			item.accept(purchasePriceVisitor);
-			purchasePrice = purchasePriceVisitor.visit(item);
+			purchasePrice = item.accept(purchasePriceVisitor);
 			return purchasePrice;
 		}
 		// calculate the market value for displaying on the label
 		public double calculateMarketValue(Item item) {
 			double marketValue;
 			Visitor marketValueVisitor = new MarketValueVisitor();
-			item.accept(marketValueVisitor);
-			marketValue = marketValueVisitor.visit(item);
+			marketValue = item.accept(marketValueVisitor);
 			return marketValue;
 		}
 		// Show purchase price on label
 		public void displayPurchasePrice(Item selectedItem) {
 			double purchasePrice = calculatePurchasePrice(selectedItem);
-			System.out.println("Purchase Price is: " + purchasePrice);
+			//System.out.println("Purchase Price is: " + purchasePrice);
 			PurchasePriceLabel.textProperty().bind(new SimpleDoubleProperty(purchasePrice).asString());
 		}
 		// Show market value on label
 		public void displayMarketValue(Item selectedItem) {
 			double marketValue = calculateMarketValue(selectedItem);
-			System.out.println("Market Value is: " + marketValue);
+			//System.out.println("Market Value is: " + marketValue);
 			MarketValueLabel.textProperty().bind(new SimpleDoubleProperty(marketValue).asString());
 		}
 	@FXML
