@@ -520,9 +520,9 @@ public class SmartFarmDashboardController implements FlightAnimation {
         	alert.show();
         });
 		
-//		// TelloDrone Fly to visit item
-//		TelloDroneAdapter telloAdapter = startDrone();
-//		telloAdapter.visitItem(getSelectedItem());
+		// TelloDrone Fly to visit item
+		TelloDroneAdapter telloAdapter = startDrone();
+		telloAdapter.visitItem(getSelectedItem());
 	}
 
 	@Override
@@ -593,9 +593,9 @@ public class SmartFarmDashboardController implements FlightAnimation {
 		//ScanFarmAction.setText("Scanning...");
 		//ScanFarmAction.setText("Scan Farm");
 		
-//		// TelloDrone fly to scan farm
-//		TelloDroneAdapter telloAdapter = startDrone();
-//		telloAdapter.scanFarm();
+		// TelloDrone fly to scan farm
+		TelloDroneAdapter telloAdapter = startDrone();
+		telloAdapter.scanFarm();
 		
 	}
 	
