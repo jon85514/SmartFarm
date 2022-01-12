@@ -1,4 +1,4 @@
-# assignment5
+# SmartFarm
 
 ## URL: https://gitlab.cs.uab.edu/cs520_group1/assignment5.git
 
